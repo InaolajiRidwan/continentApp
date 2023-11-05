@@ -9,18 +9,18 @@ import Col from "react-bootstrap/Col";
 
 export const NavHeader = ({elect, search}) => {
   return (
-    <div>
+    <div style={{background: "orange"}}>
       {
         <Navbar expand="lg" className="navcolor">
           <Container>
             <Navbar.Brand
-              style={{ fontWeight: "bold", color: "black" }}
+              style={{ fontWeight: "bold", color: "black", color: "white" }}
               href="#home"
             >
              List of Countries Developed by
             </Navbar.Brand>
             <Navbar.Brand
-              style={{ fontWeight: "bolder", color: "black" }}
+              style={{ fontWeight: "bolder", color: "white" }}
               className="fs-1"
               href="#home"
             >
@@ -30,7 +30,7 @@ export const NavHeader = ({elect, search}) => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <NavDropdown
-                  style={{ fontWeight: "bold" }}
+                  style={{ fontWeight: "bold" , color: "white" }}
                   title="Categories"
                   id="basic-nav-dropdown"
                 >

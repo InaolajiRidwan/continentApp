@@ -58,14 +58,16 @@ export const Generatedapi = () => {
 
   return (
     <div>
-      {<NavHeader elect={elect} />}
+      <div>
+        {<NavHeader elect={elect} />}
+      </div>
 
-      <div className="row">
+      <div className="row mt-5">
         {newpage.map(({ id, name, capital, flags, population, timezones }) => {
           return (
             <div className="col-md-3">
-              <Card className="nt-4" style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={flags.png} />
+              <Card className="mt-4" style={{ width: "18rem" }}>
+                <Card.Img variant="top" style={{height: "150px"}} src={flags.png} />
                 <Card.Body>
                   <Card.Title>{name.common}</Card.Title>
                   <Card.Text>{name.official}</Card.Text>
@@ -80,12 +82,12 @@ export const Generatedapi = () => {
           );
         })}
         {
-          <div className="button-row">
+          <div className="button-row mt-4">
             {pageNumber.map((btn) => {
               return (
                 <button
                   className="ms-2"
-                  style={{ width: "5%", height: "100%" }}
+                  style={{ width: "5%", height: "100%", backgroundColor: "orange" }}
                   onClick={newresults}
                 >
                   {btn}
