@@ -9,15 +9,15 @@ import Col from "react-bootstrap/Col";
 
 export const NavHeader = ({elect, search}) => {
   return (
-    <div style={{background: "orange"}}>
+    <div>
       {
-        <Navbar expand="lg" className="navcolor">
+        <Navbar expand="lg" className="navcolor fixed-top" style={{backgroundColor: "black"}}>
           <Container>
             <Navbar.Brand
               style={{ fontWeight: "bold", color: "black", color: "white" }}
               href="#home"
             >
-             List of Countries Developed by
+              List of Countries Developed by
             </Navbar.Brand>
             <Navbar.Brand
               style={{ fontWeight: "bolder", color: "white" }}
@@ -28,11 +28,11 @@ export const NavHeader = ({elect, search}) => {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+              <Nav className="me-auto ">
                 <NavDropdown
-                  style={{ fontWeight: "bold" , color: "white" }}
                   title="Categories"
                   id="basic-nav-dropdown"
+                  style={{ fontWeight: "bold", backgroundColor: "white"}}
                 >
                   <NavDropdown.Item
                     href="#action/3.1"
@@ -72,7 +72,7 @@ export const NavHeader = ({elect, search}) => {
                     Asia
                   </NavDropdown.Item>
                 </NavDropdown>
-                {/* <Form inline className="ms-5 w-100">
+                <Form inline className="ms-5 w-100">
                   <Row>
                     <Col xs="auto">
                       <Form.Control
@@ -84,7 +84,7 @@ export const NavHeader = ({elect, search}) => {
                       />
                     </Col>
                   </Row>
-                </Form> */}
+                </Form>
               </Nav>
             </Navbar.Collapse>
           </Container>
